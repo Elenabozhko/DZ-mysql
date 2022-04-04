@@ -1,0 +1,502 @@
+C:\Users\Stanislav>ssh 192.168.1.11 -l elena
+elena@192.168.1.11's password:
+Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.4.0-99-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ System information disabled due to load higher than 1.0
+
+ * Super-optimized for small spaces - read how we shrank the memory
+   footprint of MicroK8s to make it the smallest full K8s around.
+
+   https://ubuntu.com/blog/microk8s-memory-optimisation
+
+41 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+Last login: Mon Apr  4 14:28:26 2022
+elena@ubuntuserv:~$ sudo apt update
+[sudo] password for elena:
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu focal InRelease
+Пол:2 http://ru.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Пол:3 http://ru.archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Пол:4 http://ru.archive.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Пол:5 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1 708 kB]
+Пол:6 http://ru.archive.ubuntu.com/ubuntu focal-updates/main Translation-en [319 kB]
+Пол:7 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [14,8 kB]
+Пол:8 http://ru.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [914 kB]
+Пол:9 http://ru.archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [130 kB]
+Пол:10 http://ru.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 c-n-f Metadata [528 B]
+Пол:11 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [915 kB]
+Пол:12 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [204 kB]
+Пол:13 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [20,4 kB]
+Пол:14 http://ru.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [24,4 kB]
+Пол:15 http://ru.archive.ubuntu.com/ubuntu focal-updates/multiverse Translation-en [7 336 B]
+Пол:16 http://ru.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata [592 B]
+Пол:17 http://ru.archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [42,2 kB]
+Пол:18 http://ru.archive.ubuntu.com/ubuntu focal-backports/main Translation-en [10,1 kB]
+Пол:19 http://ru.archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [22,7 kB]
+Пол:20 http://ru.archive.ubuntu.com/ubuntu focal-backports/universe Translation-en [15,5 kB]
+Пол:21 http://ru.archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [808 B]
+Пол:22 http://ru.archive.ubuntu.com/ubuntu focal-security/main amd64 Packages [1 381 kB]
+Пол:23 http://ru.archive.ubuntu.com/ubuntu focal-security/main Translation-en [238 kB]
+Пол:24 http://ru.archive.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [9 872 B]
+Пол:25 http://ru.archive.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [856 kB]
+Пол:26 http://ru.archive.ubuntu.com/ubuntu focal-security/restricted Translation-en [122 kB]
+Пол:27 http://ru.archive.ubuntu.com/ubuntu focal-security/restricted amd64 c-n-f Metadata [532 B]
+Пол:28 http://ru.archive.ubuntu.com/ubuntu focal-security/universe amd64 Packages [695 kB]
+Пол:29 http://ru.archive.ubuntu.com/ubuntu focal-security/universe Translation-en [122 kB]
+Пол:30 http://ru.archive.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [14,1 kB]
+Получено 8 124 kB за 2мин 8с (63,4 kB/s)
+
+
+
+Чтение списков пакетов… Готово
+Построение дерева зависимостей
+Чтение информации о состоянии… Готово
+Может быть обновлено 97 пакетов. Запустите «apt list --upgradable» для их показа.
+elena@ubuntuserv:~$
+elena@ubuntuserv:~$
+elena@ubuntuserv:~$
+elena@ubuntuserv:~$ sudo apt install mysql-server
+Чтение списков пакетов… Готово
+Построение дерева зависимостей
+Чтение информации о состоянии… Готово
+Будут установлены следующие дополнительные пакеты:
+  libcgi-fast-perl libcgi-pm-perl libencode-locale-perl libevent-core-2.1-7 libevent-pthreads-2.1-7 libfcgi-perl
+  libhtml-parser-perl libhtml-tagset-perl libhtml-template-perl libhttp-date-perl libhttp-message-perl libio-html-perl
+  liblwp-mediatypes-perl libmecab2 libtimedate-perl liburi-perl mecab-ipadic mecab-ipadic-utf8 mecab-utils
+  mysql-client-8.0 mysql-client-core-8.0 mysql-common mysql-server-8.0 mysql-server-core-8.0
+Предлагаемые пакеты:
+  libdata-dump-perl libipc-sharedcache-perl libwww-perl mailx tinyca
+Следующие НОВЫЕ пакеты будут установлены:
+  libcgi-fast-perl libcgi-pm-perl libencode-locale-perl libevent-core-2.1-7 libevent-pthreads-2.1-7 libfcgi-perl
+  libhtml-parser-perl libhtml-tagset-perl libhtml-template-perl libhttp-date-perl libhttp-message-perl libio-html-perl
+  liblwp-mediatypes-perl libmecab2 libtimedate-perl liburi-perl mecab-ipadic mecab-ipadic-utf8 mecab-utils
+  mysql-client-8.0 mysql-client-core-8.0 mysql-common mysql-server mysql-server-8.0 mysql-server-core-8.0
+Обновлено 0 пакетов, установлено 25 новых пакетов, для удаления отмечено 0 пакетов, и 97 пакетов не обновлено.
+Необходимо скачать 31,4 MB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 262 MB.
+Хотите продолжить? [Д/н] y
+Пол:1 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 mysql-common all 5.8+1.0.5ubuntu2 [7 496 B]
+Пол:2 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 mysql-client-core-8.0 amd64 8.0.28-0ubuntu0.20.04.3 [4 429 kB]
+Пол:3 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 mysql-client-8.0 amd64 8.0.28-0ubuntu0.20.04.3 [22,0 kB]
+Пол:4 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libevent-core-2.1-7 amd64 2.1.11-stable-1 [89,1 kB]
+Пол:5 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libevent-pthreads-2.1-7 amd64 2.1.11-stable-1 [7 372 B]
+Пол:6 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libmecab2 amd64 0.996-10build1 [233 kB]
+Пол:7 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 mysql-server-core-8.0 amd64 8.0.28-0ubuntu0.20.04.3 [18,0 MB]
+Пол:7 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 mysql-server-core-8.0 amd64 8.0.28-0ubuntu0.20.04.3 [18,0 MB]
+Пол:8 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 mysql-server-8.0 amd64 8.0.28-0ubuntu0.20.04.3 [1 271 kB]
+Пол:9 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libhtml-tagset-perl all 3.20-4 [12,5 kB]
+Пол:10 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 liburi-perl all 1.76-2 [77,5 kB]
+Пол:11 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libhtml-parser-perl amd64 3.72-5 [86,3 kB]
+Пол:12 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libcgi-pm-perl all 4.46-1 [186 kB]
+Пол:13 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libfcgi-perl amd64 0.79-1 [33,1 kB]
+Пол:14 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libcgi-fast-perl all 1:2.15-1 [10,5 kB]
+Пол:15 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libencode-locale-perl all 1.05-1 [12,3 kB]
+Пол:16 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libhtml-template-perl all 2.97-1 [59,0 kB]
+Пол:17 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libtimedate-perl all 2.3200-1 [34,0 kB]
+Пол:18 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libhttp-date-perl all 6.05-1 [9 920 B]
+Пол:19 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libio-html-perl all 1.001-1 [14,9 kB]
+Пол:20 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 liblwp-mediatypes-perl all 6.04-1 [19,5 kB]
+Пол:21 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libhttp-message-perl all 6.22-1 [76,1 kB]
+Пол:22 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 mecab-utils amd64 0.996-10build1 [4 912 B]
+Пол:23 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 mecab-ipadic all 2.7.0-20070801+main-2.1 [6 714 kB]
+Пол:24 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 mecab-ipadic-utf8 all 2.7.0-20070801+main-2.1 [4 380 B]
+Пол:25 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 mysql-server all 8.0.28-0ubuntu0.20.04.3 [9 544 B]
+Получено 25,9 MB за 9мин 17с (46,6 kB/s)
+Предварительная настройка пакетов …
+Выбор ранее не выбранного пакета mysql-common.
+(Чтение базы данных … на данный момент установлено 76319 файлов и каталогов.)
+Подготовка к распаковке …/0-mysql-common_5.8+1.0.5ubuntu2_all.deb …
+Распаковывается mysql-common (5.8+1.0.5ubuntu2) …
+Выбор ранее не выбранного пакета mysql-client-core-8.0.
+Подготовка к распаковке …/1-mysql-client-core-8.0_8.0.28-0ubuntu0.20.04.3_amd64.deb …
+Распаковывается mysql-client-core-8.0 (8.0.28-0ubuntu0.20.04.3) …
+Выбор ранее не выбранного пакета mysql-client-8.0.
+Подготовка к распаковке …/2-mysql-client-8.0_8.0.28-0ubuntu0.20.04.3_amd64.deb …
+Распаковывается mysql-client-8.0 (8.0.28-0ubuntu0.20.04.3) …
+Выбор ранее не выбранного пакета libevent-core-2.1-7:amd64.
+Подготовка к распаковке …/3-libevent-core-2.1-7_2.1.11-stable-1_amd64.deb …
+Распаковывается libevent-core-2.1-7:amd64 (2.1.11-stable-1) …
+Выбор ранее не выбранного пакета libevent-pthreads-2.1-7:amd64.
+Подготовка к распаковке …/4-libevent-pthreads-2.1-7_2.1.11-stable-1_amd64.deb …
+Распаковывается libevent-pthreads-2.1-7:amd64 (2.1.11-stable-1) …
+Выбор ранее не выбранного пакета libmecab2:amd64.
+Подготовка к распаковке …/5-libmecab2_0.996-10build1_amd64.deb …
+Распаковывается libmecab2:amd64 (0.996-10build1) …
+Выбор ранее не выбранного пакета mysql-server-core-8.0.
+Подготовка к распаковке …/6-mysql-server-core-8.0_8.0.28-0ubuntu0.20.04.3_amd64.deb …
+Распаковывается mysql-server-core-8.0 (8.0.28-0ubuntu0.20.04.3) …
+Настраивается пакет mysql-common (5.8+1.0.5ubuntu2) …
+update-alternatives: используется /etc/mysql/my.cnf.fallback для предоставления /etc/mysql/my.cnf (my.cnf) в автоматическом режиме
+Выбор ранее не выбранного пакета mysql-server-8.0.
+(Чтение базы данных … на данный момент установлен 76541 файл и каталог.)
+Подготовка к распаковке …/00-mysql-server-8.0_8.0.28-0ubuntu0.20.04.3_amd64.deb …
+Распаковывается mysql-server-8.0 (8.0.28-0ubuntu0.20.04.3) …
+Выбор ранее не выбранного пакета libhtml-tagset-perl.
+Подготовка к распаковке …/01-libhtml-tagset-perl_3.20-4_all.deb …
+Распаковывается libhtml-tagset-perl (3.20-4) …
+Выбор ранее не выбранного пакета liburi-perl.
+Подготовка к распаковке …/02-liburi-perl_1.76-2_all.deb …
+Распаковывается liburi-perl (1.76-2) …
+Выбор ранее не выбранного пакета libhtml-parser-perl.
+Подготовка к распаковке …/03-libhtml-parser-perl_3.72-5_amd64.deb …
+Распаковывается libhtml-parser-perl (3.72-5) …
+Выбор ранее не выбранного пакета libcgi-pm-perl.
+Подготовка к распаковке …/04-libcgi-pm-perl_4.46-1_all.deb …
+Распаковывается libcgi-pm-perl (4.46-1) …
+Выбор ранее не выбранного пакета libfcgi-perl.
+Подготовка к распаковке …/05-libfcgi-perl_0.79-1_amd64.deb …
+Распаковывается libfcgi-perl (0.79-1) …
+Выбор ранее не выбранного пакета libcgi-fast-perl.
+Подготовка к распаковке …/06-libcgi-fast-perl_1%3a2.15-1_all.deb …
+Распаковывается libcgi-fast-perl (1:2.15-1) …
+Выбор ранее не выбранного пакета libencode-locale-perl.
+Подготовка к распаковке …/07-libencode-locale-perl_1.05-1_all.deb …
+Распаковывается libencode-locale-perl (1.05-1) …
+Выбор ранее не выбранного пакета libhtml-template-perl.
+Подготовка к распаковке …/08-libhtml-template-perl_2.97-1_all.deb …
+Распаковывается libhtml-template-perl (2.97-1) …
+Выбор ранее не выбранного пакета libtimedate-perl.
+Подготовка к распаковке …/09-libtimedate-perl_2.3200-1_all.deb …
+Распаковывается libtimedate-perl (2.3200-1) …
+Выбор ранее не выбранного пакета libhttp-date-perl.
+Подготовка к распаковке …/10-libhttp-date-perl_6.05-1_all.deb …
+Распаковывается libhttp-date-perl (6.05-1) …
+Выбор ранее не выбранного пакета libio-html-perl.
+Подготовка к распаковке …/11-libio-html-perl_1.001-1_all.deb …
+Распаковывается libio-html-perl (1.001-1) …
+Выбор ранее не выбранного пакета liblwp-mediatypes-perl.
+Подготовка к распаковке …/12-liblwp-mediatypes-perl_6.04-1_all.deb …
+Распаковывается liblwp-mediatypes-perl (6.04-1) …
+Выбор ранее не выбранного пакета libhttp-message-perl.
+Подготовка к распаковке …/13-libhttp-message-perl_6.22-1_all.deb …
+Распаковывается libhttp-message-perl (6.22-1) …
+Выбор ранее не выбранного пакета mecab-utils.
+Подготовка к распаковке …/14-mecab-utils_0.996-10build1_amd64.deb …
+Распаковывается mecab-utils (0.996-10build1) …
+Выбор ранее не выбранного пакета mecab-ipadic.
+Подготовка к распаковке …/15-mecab-ipadic_2.7.0-20070801+main-2.1_all.deb …
+Распаковывается mecab-ipadic (2.7.0-20070801+main-2.1) …
+Выбор ранее не выбранного пакета mecab-ipadic-utf8.
+Подготовка к распаковке …/16-mecab-ipadic-utf8_2.7.0-20070801+main-2.1_all.deb …
+Распаковывается mecab-ipadic-utf8 (2.7.0-20070801+main-2.1) …
+Выбор ранее не выбранного пакета mysql-server.
+Подготовка к распаковке …/17-mysql-server_8.0.28-0ubuntu0.20.04.3_all.deb …
+Распаковывается mysql-server (8.0.28-0ubuntu0.20.04.3) …
+Настраивается пакет libmecab2:amd64 (0.996-10build1) …
+Настраивается пакет mysql-client-core-8.0 (8.0.28-0ubuntu0.20.04.3) …
+Настраивается пакет libhtml-tagset-perl (3.20-4) …
+Настраивается пакет liblwp-mediatypes-perl (6.04-1) …
+Настраивается пакет libencode-locale-perl (1.05-1) …
+Настраивается пакет mecab-utils (0.996-10build1) …
+Настраивается пакет libevent-core-2.1-7:amd64 (2.1.11-stable-1) …
+Настраивается пакет libio-html-perl (1.001-1) …
+Настраивается пакет libtimedate-perl (2.3200-1) …
+Настраивается пакет mysql-client-8.0 (8.0.28-0ubuntu0.20.04.3) …
+Настраивается пакет libfcgi-perl (0.79-1) …
+Настраивается пакет liburi-perl (1.76-2) …
+Настраивается пакет libevent-pthreads-2.1-7:amd64 (2.1.11-stable-1) …
+Настраивается пакет libhttp-date-perl (6.05-1) …
+Настраивается пакет mecab-ipadic (2.7.0-20070801+main-2.1) …
+Compiling IPA dictionary for Mecab.  This takes long time...
+reading /usr/share/mecab/dic/ipadic/unk.def ... 40
+emitting double-array: 100% |###########################################|
+/usr/share/mecab/dic/ipadic/model.def is not found. skipped.
+reading /usr/share/mecab/dic/ipadic/Noun.org.csv ... 16668
+reading /usr/share/mecab/dic/ipadic/Postp.csv ... 146
+reading /usr/share/mecab/dic/ipadic/Symbol.csv ... 208
+reading /usr/share/mecab/dic/ipadic/Adj.csv ... 27210
+reading /usr/share/mecab/dic/ipadic/Auxil.csv ... 199
+reading /usr/share/mecab/dic/ipadic/Noun.proper.csv ... 27328
+reading /usr/share/mecab/dic/ipadic/Noun.place.csv ... 72999
+reading /usr/share/mecab/dic/ipadic/Adnominal.csv ... 135
+reading /usr/share/mecab/dic/ipadic/Noun.adjv.csv ... 3328
+reading /usr/share/mecab/dic/ipadic/Filler.csv ... 19
+reading /usr/share/mecab/dic/ipadic/Suffix.csv ... 1393
+reading /usr/share/mecab/dic/ipadic/Noun.adverbal.csv ... 795
+reading /usr/share/mecab/dic/ipadic/Noun.others.csv ... 151
+reading /usr/share/mecab/dic/ipadic/Prefix.csv ... 221
+reading /usr/share/mecab/dic/ipadic/Adverb.csv ... 3032
+reading /usr/share/mecab/dic/ipadic/Noun.nai.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Noun.verbal.csv ... 12146
+reading /usr/share/mecab/dic/ipadic/Interjection.csv ... 252
+reading /usr/share/mecab/dic/ipadic/Conjunction.csv ... 171
+reading /usr/share/mecab/dic/ipadic/Noun.demonst.csv ... 120
+reading /usr/share/mecab/dic/ipadic/Others.csv ... 2
+reading /usr/share/mecab/dic/ipadic/Noun.name.csv ... 34202
+reading /usr/share/mecab/dic/ipadic/Noun.csv ... 60477
+reading /usr/share/mecab/dic/ipadic/Verb.csv ... 130750
+reading /usr/share/mecab/dic/ipadic/Postp-col.csv ... 91
+reading /usr/share/mecab/dic/ipadic/Noun.number.csv ... 42
+emitting double-array: 100% |###########################################|
+reading /usr/share/mecab/dic/ipadic/matrix.def ... 1316x1316
+emitting matrix      : 100% |###########################################|
+
+done!
+update-alternatives: используется /var/lib/mecab/dic/ipadic для предоставления /var/lib/mecab/dic/debian (mecab-dictionary) в автоматическом режиме
+Настраивается пакет mysql-server-core-8.0 (8.0.28-0ubuntu0.20.04.3) …
+Настраивается пакет mecab-ipadic-utf8 (2.7.0-20070801+main-2.1) …
+Compiling IPA dictionary for Mecab.  This takes long time...
+reading /usr/share/mecab/dic/ipadic/unk.def ... 40
+emitting double-array: 100% |###########################################|
+/usr/share/mecab/dic/ipadic/model.def is not found. skipped.
+reading /usr/share/mecab/dic/ipadic/Noun.org.csv ... 16668
+reading /usr/share/mecab/dic/ipadic/Postp.csv ... 146
+reading /usr/share/mecab/dic/ipadic/Symbol.csv ... 208
+reading /usr/share/mecab/dic/ipadic/Adj.csv ... 27210
+reading /usr/share/mecab/dic/ipadic/Auxil.csv ... 199
+reading /usr/share/mecab/dic/ipadic/Noun.proper.csv ... 27328
+reading /usr/share/mecab/dic/ipadic/Noun.place.csv ... 72999
+reading /usr/share/mecab/dic/ipadic/Adnominal.csv ... 135
+reading /usr/share/mecab/dic/ipadic/Noun.adjv.csv ... 3328
+reading /usr/share/mecab/dic/ipadic/Filler.csv ... 19
+reading /usr/share/mecab/dic/ipadic/Suffix.csv ... 1393
+reading /usr/share/mecab/dic/ipadic/Noun.adverbal.csv ... 795
+reading /usr/share/mecab/dic/ipadic/Noun.others.csv ... 151
+reading /usr/share/mecab/dic/ipadic/Prefix.csv ... 221
+reading /usr/share/mecab/dic/ipadic/Adverb.csv ... 3032
+reading /usr/share/mecab/dic/ipadic/Noun.nai.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Noun.verbal.csv ... 12146
+reading /usr/share/mecab/dic/ipadic/Interjection.csv ... 252
+reading /usr/share/mecab/dic/ipadic/Conjunction.csv ... 171
+reading /usr/share/mecab/dic/ipadic/Noun.demonst.csv ... 120
+reading /usr/share/mecab/dic/ipadic/Others.csv ... 2
+reading /usr/share/mecab/dic/ipadic/Noun.name.csv ... 34202
+reading /usr/share/mecab/dic/ipadic/Noun.csv ... 60477
+reading /usr/share/mecab/dic/ipadic/Verb.csv ... 130750
+reading /usr/share/mecab/dic/ipadic/Postp-col.csv ... 91
+reading /usr/share/mecab/dic/ipadic/Noun.number.csv ... 42
+emitting double-array: 100% |###########################################|
+reading /usr/share/mecab/dic/ipadic/matrix.def ... 1316x1316
+emitting matrix      : 100% |###########################################|
+
+done!
+update-alternatives: используется /var/lib/mecab/dic/ipadic-utf8 для предоставления /var/lib/mecab/dic/debian (mecab-dictionary) в автоматическом режиме
+Настраивается пакет libhtml-parser-perl (3.72-5) …
+Настраивается пакет libhttp-message-perl (6.22-1) …
+Настраивается пакет mysql-server-8.0 (8.0.28-0ubuntu0.20.04.3) …
+update-alternatives: используется /etc/mysql/mysql.cnf для предоставления /etc/mysql/my.cnf (my.cnf) в автоматическом режиме
+Renaming removed key_buffer and myisam-recover options (if present)
+mysqld will log errors to /var/log/mysql/error.log
+mysqld is running as pid 2222
+Created symlink /etc/systemd/system/multi-user.target.wants/mysql.service → /lib/systemd/system/mysql.service.
+Настраивается пакет libcgi-pm-perl (4.46-1) …
+Настраивается пакет libhtml-template-perl (2.97-1) …
+Настраивается пакет mysql-server (8.0.28-0ubuntu0.20.04.3) …
+Настраивается пакет libcgi-fast-perl (1:2.15-1) …
+Обрабатываются триггеры для systemd (245.4-4ubuntu3.15) …
+Обрабатываются триггеры для man-db (2.9.1-1) …
+Обрабатываются триггеры для libc-bin (2.31-0ubuntu9.2) …
+elena@ubuntuserv:~$ sudo mysql_secure_installation
+[sudo] password for elena:
+
+Securing the MySQL server deployment.
+
+Connecting to MySQL using a blank password.
+
+VALIDATE PASSWORD COMPONENT can be used to test passwords
+and improve security. It checks the strength of password
+and allows the users to set only those passwords which are
+secure enough. Would you like to setup VALIDATE PASSWORD component?
+
+Press y|Y for Yes, any other key for No: n
+Please set the password for root here.
+
+New password:
+
+Re-enter new password:
+By default, a MySQL installation has an anonymous user,
+allowing anyone to log into MySQL without having to have
+a user account created for them. This is intended only for
+testing, and to make the installation go a bit smoother.
+You should remove them before moving into a production
+environment.
+
+Remove anonymous users? (Press y|Y for Yes, any other key for No) : n
+
+ ... skipping.
+
+
+Normally, root should only be allowed to connect from
+'localhost'. This ensures that someone cannot guess at
+the root password from the network.
+
+Disallow root login remotely? (Press y|Y for Yes, any other key for No) : n
+
+ ... skipping.
+By default, MySQL comes with a database named 'test' that
+anyone can access. This is also intended only for testing,
+and should be removed before moving into a production
+environment.
+
+
+Remove test database and access to it? (Press y|Y for Yes, any other key for No) : n
+
+ ... skipping.
+Reloading the privilege tables will ensure that all changes
+made so far will take effect immediately.
+
+Reload privilege tables now? (Press y|Y for Yes, any other key for No) : y
+Success.
+
+All done!
+elena@ubuntuserv:~$ sudo mysql
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 8.0.28-0ubuntu0.20.04.3 (Ubuntu)
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234ROOT5678';
+Query OK, 0 rows affected (8,41 sec)
+
+mysql> FLUSH PRIVILEGES;
+Query OK, 0 rows affected (0,67 sec)
+
+mysql> SELECT user,authentication_string,plugin,host FROM mysql.user;
++------------------+------------------------------------------------------------------------+-----------------------+-----------+
+| user             | authentication_string                                                  | plugin                | host      |
++------------------+------------------------------------------------------------------------+-----------------------+-----------+
+| debian-sys-maint | $A$005$19+=B8K*L-wo|LwlOpUDgHG9cJWYIXmPRgafJBNFf97j6wk0d5Os1zl4 | caching_sha2_password | localhost |
+| mysql.infoschema | $A$005$THISISACOMBINATIONOFINVALIDSALTANDPASSWORDTHATMUSTNEVERBRBEUSED | caching_sha2_password | localhost |
+| mysql.session    | $A$005$THISISACOMBINATIONOFINVALIDSALTANDPASSWORDTHATMUSTNEVERBRBEUSED | caching_sha2_password | localhost |
+| mysql.sys        | $A$005$THISISACOMBINATIONOFINVALIDSALTANDPASSWORDTHATMUSTNEVERBRBEUSED | caching_sha2_password | localhost |
+| root             | *BCC6D2C9408813B170A620FE7796CA93E89B4425                              | mysql_native_password | localhost |
++------------------+------------------------------------------------------------------------+-----------------------+-----------+
+5 rows in set (0,45 sec)
+
+mysql> CREATE USER 'user'@'localhost' IDENTIFIED BY '1234ROOT5678';
+Query OK, 0 rows affected (7,90 sec)
+
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'user'@'localhost' WITH GRANT OPTION;
+Query OK, 0 rows affected (0,70 sec)
+
+mysql> exit;
+Bye
+elena@ubuntuserv:~$ nano .my.cnf
+elena@ubuntuserv:~$ mysql
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 11
+Server version: 8.0.28-0ubuntu0.20.04.3 (Ubuntu)
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> CREATE DATABASE example;
+Query OK, 1 row affected (1,45 sec)
+
+mysql> USE example;
+Database changed
+mysql> CREATE TABLE users (id INT, name TEXT);
+Query OK, 0 rows affected (5,29 sec)
+
+mysql> DESCRIBE users;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| id    | int  | YES  |     | NULL    |       |
+| name  | text | YES  |     | NULL    |       |
++-------+------+------+-----+---------+-------+
+2 rows in set (1,27 sec)
+
+mysql> CREATE DATABASE sample;
+Query OK, 1 row affected (1,71 sec)
+
+mysql> exit;
+Bye
+elena@ubuntuserv:~$ mysqldump -u root example > example.sql
+mysqldump: Got error: 1045: Access denied for user 'root'@'localhost' (using password: NO) when trying to connect
+elena@ubuntuserv:~$ mysqldump -p root example > example.sql
+Enter password:
+mysqldump: Got error: 1045: Access denied for user 'elena'@'localhost' (using password: YES) when trying to connect
+elena@ubuntuserv:~$ mysqldump -p root example > example.sql
+Enter password:
+mysqldump: Got error: 1045: Access denied for user 'elena'@'localhost' (using password: YES) when trying to connect
+elena@ubuntuserv:~$ mysqldump -p root example > example.sql
+Enter password:
+mysqldump: Got error: 1045: Access denied for user 'elena'@'localhost' (using password: YES) when trying to connect
+elena@ubuntuserv:~$ mysqldump -p root example > example.sql
+Enter password:
+mysqldump: Got error: 1045: Access denied for user 'elena'@'localhost' (using password: YES) when trying to connect
+elena@ubuntuserv:~$ ls -la
+total 48
+drwxr-xr-x 5 elena elena 4096 апр  4 15:32 .
+drwxr-xr-x 3 root  root  4096 фев  9 12:36 ..
+-rw------- 1 elena elena  878 фев 15 17:04 .bash_history
+-rw-r--r-- 1 elena elena  220 фев 25  2020 .bash_logout
+-rw-r--r-- 1 elena elena 3771 фев 25  2020 .bashrc
+drwx------ 3 elena elena 4096 фев 10 09:25 .cache
+drwx------ 3 elena elena 4096 фев 10 09:25 .config
+-rw-rw-r-- 1 elena elena    0 апр  4 15:33 example.sql
+-rw-rw-r-- 1 elena elena   17 фев 15 16:44 file_dz
+drwx------ 3 elena elena 4096 фев 10 09:25 .local
+-rw-rw-r-- 1 elena elena   40 апр  4 15:25 .my.cnf
+-rw------- 1 elena elena  173 апр  4 15:30 .mysql_history
+-rw-r--r-- 1 elena elena  807 фев 25  2020 .profile
+-rw-r--r-- 1 elena elena    0 фев  9 13:49 .sudo_as_admin_successful
+elena@ubuntuserv:~$ mysql
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 17
+Server version: 8.0.28-0ubuntu0.20.04.3 (Ubuntu)
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> USE sample;
+Database changed
+mysql> SHOW TABLES;
+Empty set (0,02 sec)
+
+mysql> exit
+Bye
+elena@ubuntuserv:~$ mysql sample < example.sql
+elena@ubuntuserv:~$ mysql
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 19
+Server version: 8.0.28-0ubuntu0.20.04.3 (Ubuntu)
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> SHOW TABLES;
+ERROR 1046 (3D000): No database selected
+mysql> use sample;
+Database changed
+mysql> show tables;
+Empty set (0,54 sec)
+
+mysql> show tables;
+Empty set (0,02 sec)
+
+mysql> exit
+Bye
+elena@ubuntuserv:~$
